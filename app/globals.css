@@ -6,5 +6,8 @@
   :root {
     --font-sans: "IBM Plex Sans Thai";
     --font-mono: "IBM Plex Mono";
+
+    --hackathon-primary: #ff0909;
+    --hackathon-background: #171717;
   }
 }
