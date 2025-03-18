@@ -6,3 +6,5 @@
 - You can utilize this repository boilerplate, or you can use any programming language, framework, or library of your choice.
 - Upload the project to GitHub along with a screen recording of the animation.
 - Submit the GitHub repository link viaa [@intania.tech](https://instagram.com/intania.tech) Instagram Direct Message
+
+https://github.com/user-attachments/assets/d11b322d-cd63-4224-b06f-6193b0b898c9
