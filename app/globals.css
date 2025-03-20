@@ -4,10 +4,145 @@
 
 @layer base {
   :root {
-    --font-sans: "IBM Plex Sans Thai";
-    --font-mono: "IBM Plex Mono";
+    --font-sans: "IBM Plex Sans Thai", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
 
     --hackathon-primary: #ff0909;
     --hackathon-background: #171717;
   }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--hackathon-background);
+    color: #ffffff;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+  }
+
+  code, pre {
+    font-family: var(--font-mono);
+  }
+
+  .btn-primary {
+    background-color: var(--hackathon-primary);
+    color: #460202;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: darken(var(--hackathon-primary), 10%);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .card {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes collideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+@keyframes collideRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-collideLeft {
+  animation: collideLeft 1s forwards; /* Increased duration */
+}
+
+.animate-collideRight {
+  animation: collideRight 1s forwards; /* Increased duration */
+}
+
+@keyframes flash {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes whirlpoolLeft {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  50% {
+    transform: translate(0, -100%) rotate(-180deg);
+  }
+  75% {
+    transform: translate(50%, -50%) rotate(-270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-360deg);
+  }
+}
+
+@keyframes whirlpoolRight {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(50%, 50%) rotate(90deg);
+  }
+  50% {
+    transform: translate(0, 100%) rotate(180deg);
+  }
+  75% {
+    transform: translate(-50%, 50%) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+.animate-whirlpoolLeft {
+  animation: whirlpoolLeft 2s forwards;
+}
+
+.animate-whirlpoolRight {
+  animation: whirlpoolRight 2s forwards;
+}
+
+.ticket-claimed-left {
+  background: linear-gradient(to bottom right, #1f4e7c, #224379, #6d6db7);
+  box-shadow: 0 0 50px rgba(22, 61, 82, 0.9);
+}
+
+.ticket-claimed-right {
+  background: linear-gradient(to bottom right, #4a1010, #FF4500);
+  box-shadow: 0 0 50px rgba(98, 25, 91, 0.9);
 }
